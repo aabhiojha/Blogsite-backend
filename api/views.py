@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from rest_framework import status
+from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -9,6 +10,8 @@ from .serializer import PostSerializer
 
 
 class ListPostAPIView(APIView):
+    permission_classes = [AllowAny]
+
     def get(self, request):
         posts = Post.objects.all()
         serializer = PostSerializer(posts, many=True)
@@ -23,6 +26,8 @@ class ListPostAPIView(APIView):
 
 
 class PostDetailsView(APIView):
+    permission_classes = [AllowAny]
+
     def get(self, request, pk):
         post = Post.objects.get(pk=pk)
         serializer = PostSerializer(post)
