@@ -25,6 +25,5 @@ class ListPostAPIView(APIView):
 class PostDetailsView(APIView):
     def get(self, request, pk):
         post = Post.objects.get(pk=pk)
-        print(post)
         serializer = PostSerializer(post)
         return Response(serializer.data)
