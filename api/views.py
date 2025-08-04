@@ -28,7 +28,7 @@ class ListPostAPIView(APIView):
 class PostDetailsView(APIView):
     permission_classes = [AllowAny]
 
-    def get(self, request, pk):
-        post = Post.objects.get(pk=pk)
+    def get(self, request, slug):
+        post = Post.objects.get(slug=slug)
         serializer = PostSerializer(post)
         return Response(serializer.data)
