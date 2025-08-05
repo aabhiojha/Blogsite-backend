@@ -139,7 +139,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost",
     "http://localhost:5173",
     "http://frontend",
-    "blogsite-backend-d4el.onrender.com",
 ]
 
 
