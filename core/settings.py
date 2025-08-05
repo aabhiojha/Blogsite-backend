@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-g0zee$+-jffj3&3_$((q)$#knp11m==r^yltop@d$&2poy++y+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["blogsite-backend-d4el.onrender.com"]
 
 
 # Application definition
@@ -139,6 +139,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost",
     "http://localhost:5173",
     "http://frontend",
+    "blogsite-backend-d4el.onrender.com",
 ]
 
 
@@ -149,4 +150,6 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.IsAuthenticated",
     ],
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    "PAGE_SIZE": 10,
 }
