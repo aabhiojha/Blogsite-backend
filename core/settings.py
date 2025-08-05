@@ -26,7 +26,12 @@ SECRET_KEY = "django-insecure-g0zee$+-jffj3&3_$((q)$#knp11m==r^yltop@d$&2poy++y+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["blogsite-backend-d4el.onrender.com", "localhost"]
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "blogsite-frontend-henna.vercel.app",
+    "56.228.8.173",
+]
 
 
 # Application definition
@@ -138,8 +143,7 @@ MEDIA_URL = "/media/"
 CORS_ALLOWED_ORIGINS = [
     "http://localhost",
     "http://localhost:5173",
-    "http://frontend",
-    "https://blogsite-backend-d4el.onrender.com",
+    "https://blogsite-frontend-henna.vercel.app",
 ]
 
 
